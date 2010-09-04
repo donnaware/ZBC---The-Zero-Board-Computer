@@ -1,0 +1,319 @@
+From: <Saved by Windows Internet Explorer 8>
+Subject: DOSey 2000 Help
+Date: Wed, 9 Jun 2010 23:09:41 -0700
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01CB0828.D74860F0"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5579
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01CB0828.D74860F0
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file://C:\Dev1\DOS\Zet\ZetBoard\rtl\Controller\HTML\index.html
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>DOSey 2000 Help</TITLE>
+<META content=3D"text/html; charset=3DUTF-8" =
+http-equiv=3DContent-Type><!-- This line includes the general project =
+style sheet (not required) -->
+<META content=3Dtext/css http-equiv=3DContent-Style-Type><LINK =
+rel=3Dstylesheet=20
+type=3Dtext/css=20
+href=3D"file:///C:/Dev1/DOS/Zet/ZetBoard/rtl/Controller/HTML/default.css"=
+><!-- This block defines the styles of the TOC headings, change them as =
+needed -->
+<STYLE type=3Dtext/css>.navtitle {
+	MARGIN-BOTTOM: 16px; FONT-SIZE: 12pt; FONT-WEIGHT: bold
+}
+.navbar {
+	FONT-SIZE: 10pt
+}
+.heading1 {
+	FONT-FAMILY: Arial,Helvetica; COLOR: #000000; FONT-SIZE: 10pt; =
+FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.heading2 {
+	FONT-FAMILY: Arial,Helvetica; COLOR: #000000; FONT-SIZE: 9pt; =
+FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.heading3 {
+	FONT-FAMILY: Arial,Helvetica; COLOR: #000000; FONT-SIZE: 8pt; =
+FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.heading4 {
+	FONT-FAMILY: Arial,Helvetica; COLOR: #000000; FONT-SIZE: 8pt; =
+FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.heading5 {
+	FONT-FAMILY: Arial,Helvetica; COLOR: #000000; FONT-SIZE: 8pt; =
+FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.heading6 {
+	FONT-FAMILY: Arial,Helvetica; COLOR: #000000; FONT-SIZE: 8pt; =
+FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.hilight1 {
+	FONT-FAMILY: Arial,Helvetica; BACKGROUND: #002682; COLOR: #ffffff; =
+FONT-SIZE: 10pt; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.hilight2 {
+	FONT-FAMILY: Arial,Helvetica; BACKGROUND: #002682; COLOR: #ffffff; =
+FONT-SIZE: 9pt; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.hilight3 {
+	FONT-FAMILY: Arial,Helvetica; BACKGROUND: #002682; COLOR: #ffffff; =
+FONT-SIZE: 8pt; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.hilight4 {
+	FONT-FAMILY: Arial,Helvetica; BACKGROUND: #002682; COLOR: #ffffff; =
+FONT-SIZE: 8pt; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.hilight5 {
+	FONT-FAMILY: Arial,Helvetica; BACKGROUND: #002682; COLOR: #ffffff; =
+FONT-SIZE: 8pt; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.hilight6 {
+	FONT-FAMILY: Arial,Helvetica; BACKGROUND: #002682; COLOR: #ffffff; =
+FONT-SIZE: 8pt; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+TD.toc {
+	PADDING-BOTTOM: 2px; PADDING-RIGHT: 4px
+}
+</STYLE>
+
+<META name=3DGENERATOR content=3D"MSHTML 8.00.6001.18702"></HEAD>
+<BODY style=3D"BACKGROUND: #efefef">
+<P class=3Dnavtitle>DOSey 2000 Help</P>
+<P class=3Dnavbar><B>Contents</B> </P>
+<HR SIZE=3D1>
+<!-- Place holder for the TOC - this variable is REQUIRED! -->
+<TABLE class=3Dtoc border=3D0 cellSpacing=3D0 cellPadding=3D0>
+  <TBODY>
+  <TR vAlign=3Dtop>
+    <TD class=3Dtoc width=3D20 align=3Dright><SPAN class=3Dheading1><IMG =
+class=3Dicon=20
+      border=3D0 alt=3D""=20
+      =
+src=3D"file:///C:/Dev1/DOS/Zet/ZetBoard/rtl/Controller/HTML/cicon2.gif"><=
+/SPAN></TD>
+    <TD class=3Dtoc align=3Dleft><A=20
+      =
+href=3D"file:///C:/Dev1/DOS/Zet/ZetBoard/rtl/Controller/HTML/introduction=
+.htm"><SPAN=20
+      id=3Ds1 =
+class=3Dheading1>DOSey-2000</SPAN></A></TD></TR></TBODY></TABLE>
+<TABLE class=3Dtoc border=3D0 cellSpacing=3D0 cellPadding=3D0>
+  <TBODY>
+  <TR vAlign=3Dtop>
+    <TD class=3Dtoc width=3D40 align=3Dright><SPAN class=3Dheading2><IMG =
+class=3Dicon=20
+      border=3D0 alt=3D""=20
+      =
+src=3D"file:///C:/Dev1/DOS/Zet/ZetBoard/rtl/Controller/HTML/cicon9.gif"><=
+/SPAN></TD>
+    <TD class=3Dtoc align=3Dleft><A=20
+      =
+href=3D"file:///C:/Dev1/DOS/Zet/ZetBoard/rtl/Controller/HTML/welcome_topi=
+c.htm"><SPAN=20
+      id=3Ds1.1 =
+class=3Dheading2>Introduction</SPAN></A></TD></TR></TBODY></TABLE>
+<TABLE class=3Dtoc border=3D0 cellSpacing=3D0 cellPadding=3D0>
+  <TBODY>
+  <TR vAlign=3Dtop>
+    <TD class=3Dtoc width=3D40 align=3Dright><SPAN class=3Dheading2><IMG =
+class=3Dicon=20
+      border=3D0 alt=3D""=20
+      =
+src=3D"file:///C:/Dev1/DOS/Zet/ZetBoard/rtl/Controller/HTML/cicon9.gif"><=
+/SPAN></TD>
+    <TD class=3Dtoc align=3Dleft><A=20
+      =
+href=3D"file:///C:/Dev1/DOS/Zet/ZetBoard/rtl/Controller/HTML/second_topic=
+.htm"><SPAN=20
+      id=3Ds1.2 class=3Dheading2>How to use =
+DOSey</SPAN></A></TD></TR></TBODY></TABLE>
+<TABLE class=3Dtoc border=3D0 cellSpacing=3D0 cellPadding=3D0>
+  <TBODY>
+  <TR vAlign=3Dtop>
+    <TD class=3Dtoc width=3D20 align=3Dright><SPAN class=3Dheading1><IMG =
+class=3Dicon=20
+      border=3D0 alt=3D""=20
+      =
+src=3D"file:///C:/Dev1/DOS/Zet/ZetBoard/rtl/Controller/HTML/cicon2.gif"><=
+/SPAN></TD>
+    <TD class=3Dtoc align=3Dleft><A=20
+      =
+href=3D"file:///C:/Dev1/DOS/Zet/ZetBoard/rtl/Controller/HTML/chapter_2.ht=
+m"><SPAN=20
+      id=3Ds2 class=3Dheading1>Using =
+DOSey-2000</SPAN></A></TD></TR></TBODY></TABLE>
+<TABLE class=3Dtoc border=3D0 cellSpacing=3D0 cellPadding=3D0>
+  <TBODY>
+  <TR vAlign=3Dtop>
+    <TD class=3Dtoc width=3D40 align=3Dright><SPAN class=3Dheading2><IMG =
+class=3Dicon=20
+      border=3D0 alt=3D""=20
+      =
+src=3D"file:///C:/Dev1/DOS/Zet/ZetBoard/rtl/Controller/HTML/cicon9.gif"><=
+/SPAN></TD>
+    <TD class=3Dtoc align=3Dleft><A=20
+      =
+href=3D"file:///C:/Dev1/DOS/Zet/ZetBoard/rtl/Controller/HTML/overview.htm=
+"><SPAN=20
+      id=3Ds2.1 =
+class=3Dheading2>Overview</SPAN></A></TD></TR></TBODY></TABLE>
+<TABLE class=3Dtoc border=3D0 cellSpacing=3D0 cellPadding=3D0>
+  <TBODY>
+  <TR vAlign=3Dtop>
+    <TD class=3Dtoc width=3D40 align=3Dright><SPAN class=3Dheading2><IMG =
+class=3Dicon=20
+      border=3D0 alt=3D""=20
+      =
+src=3D"file:///C:/Dev1/DOS/Zet/ZetBoard/rtl/Controller/HTML/cicon2.gif"><=
+/SPAN></TD>
+    <TD class=3Dtoc align=3Dleft><A=20
+      =
+href=3D"file:///C:/Dev1/DOS/Zet/ZetBoard/rtl/Controller/HTML/sub_chapter_=
+2_1.htm"><SPAN=20
+      id=3Ds2.2 =
+class=3Dheading2>Features</SPAN></A></TD></TR></TBODY></TABLE>
+<TABLE class=3Dtoc border=3D0 cellSpacing=3D0 cellPadding=3D0>
+  <TBODY>
+  <TR vAlign=3Dtop>
+    <TD class=3Dtoc width=3D60 align=3Dright><SPAN class=3Dheading3><IMG =
+class=3Dicon=20
+      border=3D0 alt=3D""=20
+      =
+src=3D"file:///C:/Dev1/DOS/Zet/ZetBoard/rtl/Controller/HTML/cicon9.gif"><=
+/SPAN></TD>
+    <TD class=3Dtoc align=3Dleft><A=20
+      =
+href=3D"file:///C:/Dev1/DOS/Zet/ZetBoard/rtl/Controller/HTML/new_topic.ht=
+m"><SPAN=20
+      id=3Ds2.2.1 class=3Dheading3>Loading the Config=20
+Files</SPAN></A></TD></TR></TBODY></TABLE>
+<TABLE class=3Dtoc border=3D0 cellSpacing=3D0 cellPadding=3D0>
+  <TBODY>
+  <TR vAlign=3Dtop>
+    <TD class=3Dtoc width=3D60 align=3Dright><SPAN class=3Dheading3><IMG =
+class=3Dicon=20
+      border=3D0 alt=3D""=20
+      =
+src=3D"file:///C:/Dev1/DOS/Zet/ZetBoard/rtl/Controller/HTML/cicon9.gif"><=
+/SPAN></TD>
+    <TD class=3Dtoc align=3Dleft><A=20
+      =
+href=3D"file:///C:/Dev1/DOS/Zet/ZetBoard/rtl/Controller/HTML/saving_pictu=
+res.htm"><SPAN=20
+      id=3Ds2.2.2 class=3Dheading3>Configuring your=20
+board</SPAN></A></TD></TR></TBODY></TABLE>
+<HR SIZE=3D1>
+
+<P style=3D"FONT-SIZE: 8pt">=C2=A9 2010 Donnaware International =
+LLP</P></BODY></HTML>
+
+------=_NextPart_000_0000_01CB0828.D74860F0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Dev1/DOS/Zet/ZetBoard/rtl/Controller/HTML/cicon2.gif
+
+R0lGODlhEAAQAHcAACH5BAEAAOkALAAAAAAQABAAhwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAQICAgMDAwQEBAYGBggICAoKCg0NDRERERYW
+FhoaGh0dHR4eHh8fHyAgICEhISIiIiMjIyQkJCUlJSYmJicnJygoKCkpKSoqKisrKywsLC0tLS4u
+Li8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFB
+QUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1lZ
+WWBgYGhoaG5ubnJycnZ2dnl5eXt7e319fX5+fn5+fn9/f39/f39/f39/f39/f39/f4CAgICAgICA
+gICAgIGBgIGBgIKCgISEgIaGgImJf46OfpSUfJ6eeKqqc7a2bMfHYtzcVPDwQv7+L/7+Jf7+H/7+
+Gf7+Ff7+Ev7+D/7+Df7+C/7+DP7+Dv7+Ef7+E/7+Ff7+Gf7+H/7+J/7+MP7+Of7+P/7+RP7+S/7+
+U/39Wvz8Y/z8a/r6dPn5ffb2hvPzj+/vl+rqn+LiptnZq83Nrr+/r6ysrKKiop2dnZ6enp+fn6Cg
+oKGhoaKioqOjo6SkpKWlpaampqenp6ioqKmpqaqqqqurq62trbCwsLKysrW1tbe3t7i4uLq6uru7
+u7y8vL29vb6+vr6+vr6+vr+/v7+/v7+/v7+/v7+/v7+/v7+/v8DAwMDAwMDAwMHBwcLCwsfHx9DQ
+0Nra2uTk5Ozs7PPz8/j4+Pz8/P7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+
+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/vfw9+na6da7
+1r6PvqxsrJ9Sn5ZAlo4rjogciIQRhIIKgoEFgYADgIABgIABgIAAgIAAgH8Af38Af38Af38Af38B
+fwhzANMJPCOwoMGDZ4IRPMiQQb50Cg2emWjQ4cCBCxcKtAiRosA/Zxgw2PhwY7B0fy7mG8kxHYOT
+HwmudFnS5cmU6WSyrPmyIMh0M1v2xKmTZsmeA0/ONGozZ0KBS2m6nAgT6siCDvNp3br1KlaRYMN6
+ZUg2IAA7
+
+------=_NextPart_000_0000_01CB0828.D74860F0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/Dev1/DOS/Zet/ZetBoard/rtl/Controller/HTML/cicon9.gif
+
+R0lGODlhEAAQAHcAACH5BAEAAMoALAAAAAAQABAAhwAA/QAA/QAA/AAA+wAA+QAA9wAA8wAA7gAA
+6AAA3wAA2AAAxQAArwAAlAAAdAAAXgAARwEBMAEBIAEBFgEBEAEBCgEBBgEBAwAAAgAAAQAAAAAA
+AAEBAQICAgICAgQEBAYGBggICAsLCw4ODhMTExcXFxsbGyAgICMjIyYmJioqKisrKywsLC0tLS4u
+Li8vLzAwMDExMTIyMjMzMzQ0NDU1NTY2Njc3Nzg4ODk5OTo6Ojs7Ozw8PD09PT4+Pj8/P0BAQEFB
+QUJCQkNDQ0REREVFRUZGRkdHR0hISElJSUpKSktLS0xMTE1NTU5OTk9PT1BQUFFRUVJSUlNTU1RU
+VFVVVVZWVldXV1hYWFlZWVpaWltbW1xcXF1dXV5eXl9fX2BgYGFhYWJiYmNjY2RkZGVlZWZmZmdn
+Z2hoaGlpaWtra21tbW9vb3JycnR0dHZ2dnh4eHp6ent7e3x8fH19fX5+fn5+fn9/f39/f39/f39/
+f39/f39/f39/f39/f39/f4CAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGBgYGBgYKCgoOD
+g4SEhIWFhYeHh4mJiYuLi42NjZCQkJKSkpSUlJeXl5iYmJmZmZqampubm5ycnJ2dnZ6enp+fn6Cg
+oKGhoaKioqOjo6mpqbm5ucrKutfXuOPjqOzsl/Hxh/b2d/n5Yvv7UPz8Qf39NP7+Kv7+Iv7+G/7+
+Ff7+Ef7+DP7+Cf7+Bv7+Bf7+A/7+Av7+Af7+AP7+AP7+AP7+B/7+Gf7+PP7+a/7+lP7+uf7+zv7+
+3v7+8P7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+
+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v7+/v39/fv7+/f39/Pz8+7u7ubm5t7e3tfX19LS0s3N
+zcrKysfHx8TExMPDw8LCwsHBwcHBwcDAwMDAwMDAwL+/v7+/v7+/v7+/v7+/v76+vr29vby8vLu7
+uwhpAJUJVFaooMGDAwcWGtiLYcGEBJU1FDhRg8WECwUG2BigYT0NGCVuFBlA2ceQykamLHlSoUSG
+I1sKzPhyo0eQLieqNIlzJsOfMiPqLCkwKM1eI2+GnPiyaE+C9aJKnfrUotWrViFqhRgQADs=
+
+------=_NextPart_000_0000_01CB0828.D74860F0
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/Dev1/DOS/Zet/ZetBoard/rtl/Controller/HTML/default.css
+
+HR {
+	COLOR: #000000
+}
+BODY {
+	FONT-STYLE: normal; FONT-FAMILY: 'Arial'; COLOR: #000000; FONT-SIZE: =
+10pt; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+TABLE {
+	FONT-STYLE: normal; FONT-FAMILY: 'Arial'; COLOR: #000000; FONT-SIZE: =
+10pt; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+SPAN.f_CodeExample {
+	FONT-FAMILY: 'Courier New'; COLOR: #000000; FONT-SIZE: 8pt
+}
+SPAN.f_Comment {
+=09
+}
+SPAN.f_CourierFixed {
+	FONT-FAMILY: 'Courier New'; COLOR: #000000; FONT-SIZE: 9pt
+}
+SPAN.f_Heading1 {
+	COLOR: #ffffff; FONT-SIZE: 14pt; FONT-WEIGHT: bold
+}
+SPAN.f_ImageCaption {
+	FONT-SIZE: 8pt; FONT-WEIGHT: bold
+}
+SPAN.f_Notes {
+=09
+}
+P {
+	TEXT-ALIGN: left; PADDING-BOTTOM: 0px; TEXT-INDENT: 0px; MARGIN: 0px; =
+PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.p_CodeExample {
+	WHITE-SPACE: nowrap
+}
+.p_Comment {
+=09
+}
+.p_Heading1 {
+=09
+}
+.p_ImageCaption {
+=09
+}
+.p_Notes {
+=09
+}
+
+------=_NextPart_000_0000_01CB0828.D74860F0--

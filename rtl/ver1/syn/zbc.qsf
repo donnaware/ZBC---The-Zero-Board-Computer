@@ -1,0 +1,173 @@
+# Copyright (C) 1991-2008 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+
+
+# The default values for assignments are stored in the file
+#		zbc_assignment_defaults.qdf
+# If this file doesn't exist, and for assignments not listed, see file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+set_global_assignment -name FAMILY "Cyclone III"
+set_global_assignment -name DEVICE EP3C16E144C7
+set_global_assignment -name TOP_LEVEL_ENTITY zbc
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 8.1
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "18:29:33  AUGUST 03, 2010"
+set_global_assignment -name LAST_QUARTUS_VERSION 10.0
+set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name DEVICE_FILTER_PACKAGE TQFP
+set_global_assignment -name DEVICE_FILTER_PIN_COUNT 144
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 7
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ENABLE_ADVANCED_IO_TIMING ON
+set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
+set_global_assignment -name TIMEQUEST_DO_CCPP_REMOVAL ON
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name MISC_FILE "C:/Dev1/DOS/Zet/ZetBoard/rtl/ZBC/boards/zbc2/syn/zbc.dpf"
+set_instance_assignment -name CLOCK_SETTINGS clk_50_ -to clk_50_
+set_instance_assignment -name FAST_INPUT_REGISTER ON -to sdram_*
+set_instance_assignment -name FAST_OUTPUT_REGISTER ON -to sdram_*
+set_instance_assignment -name FAST_OUTPUT_ENABLE_REGISTER ON -to sdram_*
+set_location_assignment PIN_90 -to clk_50_
+set_location_assignment PIN_52 -to uart_rxd_
+set_location_assignment PIN_51 -to uart_txd_
+set_location_assignment PIN_30 -to sd_sclk_
+set_location_assignment PIN_101 -to sdram_addr_[11]
+set_location_assignment PIN_115 -to sdram_addr_[10]
+set_location_assignment PIN_100 -to sdram_addr_[9]
+set_location_assignment PIN_99 -to sdram_addr_[8]
+set_location_assignment PIN_98 -to sdram_addr_[7]
+set_location_assignment PIN_87 -to sdram_addr_[6]
+set_location_assignment PIN_86 -to sdram_addr_[5]
+set_location_assignment PIN_85 -to sdram_addr_[4]
+set_location_assignment PIN_111 -to sdram_addr_[3]
+set_location_assignment PIN_112 -to sdram_addr_[2]
+set_location_assignment PIN_113 -to sdram_addr_[1]
+set_location_assignment PIN_114 -to sdram_addr_[0]
+set_location_assignment PIN_119 -to sdram_ba_[1]
+set_location_assignment PIN_120 -to sdram_ba_[0]
+set_location_assignment PIN_104 -to sdram_clk_
+set_location_assignment PIN_103 -to sdram_ce_
+set_location_assignment PIN_125 -to sdram_ras_n_
+set_location_assignment PIN_10 -to sdram_data_[15]
+set_location_assignment PIN_8 -to sdram_data_[14]
+set_location_assignment PIN_7 -to sdram_data_[13]
+set_location_assignment PIN_6 -to sdram_data_[12]
+set_location_assignment PIN_4 -to sdram_data_[11]
+set_location_assignment PIN_110 -to sdram_data_[10]
+set_location_assignment PIN_106 -to sdram_data_[9]
+set_location_assignment PIN_105 -to sdram_data_[8]
+set_location_assignment PIN_134 -to sdram_data_[7]
+set_location_assignment PIN_135 -to sdram_data_[6]
+set_location_assignment PIN_136 -to sdram_data_[5]
+set_location_assignment PIN_137 -to sdram_data_[4]
+set_location_assignment PIN_141 -to sdram_data_[3]
+set_location_assignment PIN_142 -to sdram_data_[2]
+set_location_assignment PIN_143 -to sdram_data_[1]
+set_location_assignment PIN_144 -to sdram_data_[0]
+set_location_assignment PIN_132 -to sdram_cas_n_
+set_location_assignment PIN_121 -to sdram_cs_n_
+set_location_assignment PIN_133 -to sdram_we_n_
+set_location_assignment PIN_42 -to ps2_mclk_
+set_location_assignment PIN_43 -to ps2_mdat_
+set_location_assignment PIN_44 -to ps2_kclk_
+set_location_assignment PIN_46 -to ps2_kdat_
+set_location_assignment PIN_31 -to sd_ss_
+set_location_assignment PIN_22 -to sd_miso_
+set_location_assignment PIN_28 -to sd_mosi_
+set_location_assignment PIN_11 -to spi_sels_
+set_location_assignment PIN_25 -to spi_miso_
+set_location_assignment PIN_33 -to spi_mosi_
+set_location_assignment PIN_32 -to spi_sclk_
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to spi_sels_
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to spi_mosi_
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to spi_sclk_
+set_location_assignment PIN_23 -to reset_
+set_location_assignment PIN_65 -to vga_lcd_b_[3]
+set_location_assignment PIN_64 -to vga_lcd_b_[2]
+set_location_assignment PIN_61 -to vga_lcd_b_[1]
+set_location_assignment PIN_60 -to vga_lcd_b_[0]
+set_location_assignment PIN_72 -to vga_lcd_g_[3]
+set_location_assignment PIN_71 -to vga_lcd_g_[2]
+set_location_assignment PIN_69 -to vga_lcd_g_[1]
+set_location_assignment PIN_68 -to vga_lcd_g_[0]
+set_location_assignment PIN_66 -to vga_lcd_hsync_
+set_location_assignment PIN_80 -to vga_lcd_r_[3]
+set_location_assignment PIN_79 -to vga_lcd_r_[2]
+set_location_assignment PIN_77 -to vga_lcd_r_[1]
+set_location_assignment PIN_76 -to vga_lcd_r_[0]
+set_location_assignment PIN_67 -to vga_lcd_vsync_
+set_instance_assignment -name GLOBAL_SIGNAL "GLOBAL CLOCK" -to clk
+set_instance_assignment -name GLOBAL_SIGNAL ON -to rst
+set_location_assignment PIN_39 -to spi_mcus_
+set_location_assignment PIN_58 -to GPIO_Out_[0]
+set_location_assignment PIN_59 -to GPIO_Out_[1]
+set_location_assignment PIN_126 -to GamePort_In_[3]
+set_location_assignment PIN_127 -to GamePort_In_[2]
+set_location_assignment PIN_128 -to GamePort_In_[1]
+set_location_assignment PIN_129 -to GamePort_In_[0]
+set_location_assignment PIN_54 -to GPIO_In_[1]
+set_location_assignment PIN_55 -to GPIO_In_[0]
+set_location_assignment PIN_12 -to MCU_In_[0]
+set_location_assignment PIN_24 -to MCU_In_[1]
+set_location_assignment PIN_49 -to speaker_L
+set_location_assignment PIN_50 -to speaker_R
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name GENERATE_RBF_FILE ON
+set_global_assignment -name FORCE_CONFIGURATION_VCCIO ON
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+set_global_assignment -name CYCLONEII_RESERVE_NCEO_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_DATA1_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_FLASH_NCE_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_DCLK_AFTER_CONFIGURATION "USE AS PROGRAMMING PIN"
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name VERILOG_FILE ../rtl/zbc.v
+set_global_assignment -name VERILOG_FILE ../rtl/cpu.v
+set_global_assignment -name VERILOG_FILE ../rtl/wb_abrg.v
+set_global_assignment -name VERILOG_FILE ../rtl/wb_switch.v
+set_global_assignment -name VERILOG_FILE ../rtl/pll.v
+set_global_assignment -name VERILOG_FILE ../rtl/BIOSROM.v
+set_global_assignment -name VERILOG_FILE ../rtl/WB_SPI_Flash.v
+set_global_assignment -name VERILOG_FILE ../rtl/fmlbrg.v
+set_global_assignment -name VERILOG_FILE ../rtl/hpdmc.v
+set_global_assignment -name VERILOG_FILE ../rtl/csrbrg.v
+set_global_assignment -name VERILOG_FILE ../rtl/sdspi.v
+set_global_assignment -name VERILOG_FILE ../rtl/vdu.v
+set_global_assignment -name VERILOG_FILE ../rtl/simple_pic.v
+set_global_assignment -name VERILOG_FILE ../rtl/timer.v
+set_global_assignment -name VERILOG_FILE ../rtl/gpio.v
+set_global_assignment -name VERILOG_FILE ../rtl/Sound.v
+set_global_assignment -name VERILOG_FILE ../rtl/WB_PS2.v
+set_global_assignment -name VERILOG_FILE ../rtl/WB_Serial.v
+set_global_assignment -name VERILOG_FILE ../rtl/WB_Ethernet.v
+set_global_assignment -name VERILOG_FILE ../rtl/ram2.v
+set_location_assignment PIN_53 -to Ethernet_rx_
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name RESERVE_DATA0_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name OUTPUT_IO_TIMING_ENDPOINT "NEAR END"
+set_global_assignment -name CYCLONEIII_CONFIGURATION_SCHEME "PASSIVE SERIAL"
+set_global_assignment -name AUTO_RESTART_CONFIGURATION OFF
+set_instance_assignment -name DCLK_PIN ON -to MCU_In_[0]
+set_location_assignment PIN_83 -to Ethernet_tx_
+set_global_assignment -name MIF_FILE ../rtl/Test.mif
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

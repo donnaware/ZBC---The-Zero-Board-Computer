@@ -1,0 +1,60 @@
+[Directories]
+Include=C:\Program Files\PICC\devices\;C:\Program Files\PICC\drivers\;
+Library=
+LinkerScript=
+[defines]
+enabled=0
+D1=
+V1=
+[fileformats]
+forcecoff=0
+debug=4
+error=2
+object=0
+list=0
+scratch=0
+sta=1
+tre=1
+allerrors=1
+allwarnings=1
+stayupne=3
+stayupoe=0
+[PROJECT]
+Target=HIDZet1.hex
+Development_Mode=
+Processor=0x2550
+Processor_Text=PIC18F2550
+ToolSuite=CCS
+[Target Data]
+BuildTool=C-COMPILER
+OptionString=+FH
+AdditionalOptionString=
+BuildRequired=1
+FileList=C:\Dev1\DOS\Zet\ZetBoard\rtl\Src\PIC2550\HIDZet1.c
+[HIDZet1.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=C:\Dev1\DOS\Zet\ZetBoard\rtl\Src\PIC2550\HIDZet1.c
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Opened Files]
+1=C:\Dev1\DOS\Zet\ZetBoard\rtl\Src\PIC2550\HIDZet1.c
+2=C:\Dev1\DOS\Zet\ZetBoard\rtl\Src\PIC2550\HIDZet1.h
+3=C:\Dev1\DOS\Zet\ZetBoard\rtl\Src\PIC2550\pic18_usb_v2.h
+4=C:\Dev1\DOS\Zet\ZetBoard\rtl\Src\PIC2550\USBdescHIDTest.h
+5=C:\Dev1\DOS\Zet\ZetBoard\rtl\Src\PIC2550\SPIFPGA.h
+6=C:\Program Files\PICC\devices\18F2550.h
+7=C:\Dev1\DOS\Zet\ZetBoard\rtl\Src\PIC2550\SST25V.h
+8=DS1302.h
+9=
+10=C:\Program Files\PICC\drivers\usb.h
+11=
+[Units]
+Count=1
+1=HIDZet1.c (main)
+Link=0
