@@ -244,15 +244,18 @@ always @(posedge clk50) DRedge <= {DRedge[1:0], end_of_frame};
 wire DR_risingedge  = (DRedge[2:1] == 2'b01);      // now we can detect DR rising edge
 		   
 wire        new_byte;
+wire        sync_pulse;
 wire		end_of_frame;
 wire [ 7:0] RxData;
 reg			wren_rb;
 
-TENBASET_RxD rx1(.clk48(clk50),.manchester_data_in(Ethernet_Rx),.RxData(RxData),.new_byte_available(new_byte), .end_of_frame(end_of_frame));
+TENBASET_RxD rx1(.clk48(clk50),.manchester_data_in(Ethernet_Rx),.RxData(RxData), 
+					.new_byte_available(new_byte), .sync_pulse(sync_pulse), .end_of_frame(end_of_frame));
 
 //wire        rcv_ready = (!FRCVD && FRRCV);
 reg  [10:0] rxaddr;
 reg         isreceiving;
+reg         incaddr;
 
 always @(posedge clk50) begin
 	if(wb_rst_i) begin
@@ -260,6 +263,7 @@ always @(posedge clk50) begin
 		FEOF		<= 1'b0;				// No new frame
 		isreceiving	<= 1'b0;				// Not Receiving
 		wren_rb 	<= 1'b0;				// Not writting to buffer
+		incaddr 	<= 1'b0;				// signal to increment buffer address
 	end 
 	else begin
 
@@ -273,16 +277,21 @@ always @(posedge clk50) begin
 		if(!FEOF && !isreceiving) isreceiving <= 1'b1;
 		
 		if(isreceiving) begin
-			if(end_of_frame) begin				// New byte of data came in 
+			if(sync_pulse) begin				// New byte of data came in 
 				isreceiving <= 1'b0;			// Done receiving
 			end 
 			else begin
+				if(incaddr && !new_byte) begin
+					rxaddr <= rxaddr + 11'd1;	// receive next byte in frame
+					incaddr   <= 1'b0;
+				end
+				
 				if(new_byte) begin
-					rxaddr     <= rxaddr + 11'd1;	// receive next byte in frame
-					wren_rb    <= 1'b1;
+					wren_rb   <= 1'b1;
+					incaddr   <= 1'b1;
 				end
 				else begin
-					wren_rb 	<= 1'b0;				// Not writting to buffer
+					wren_rb   <= 1'b0;				// Not writting to buffer
 				end
 			end
 		end
@@ -347,6 +356,7 @@ module TENBASET_RxD(
     input            manchester_data_in,    // Ethernet data input
     output     [7:0] RxData,                // Data byte output
     output           new_byte_available,    //
+	output           sync_pulse,
     output 		     end_of_frame  			// indicate an Ethernet frame was captured
 );
 reg [2:0] in_data;
@@ -396,6 +406,7 @@ always @(posedge clk48)
 	else if(~&cnt) 			  transition_timeout <= transition_timeout + 1;
 reg 	  end_of_Ethernet_frame;
 always @(posedge clk48) end_of_Ethernet_frame <= &transition_timeout;
+assign sync_pulse = end_of_Ethernet_frame;
 
 reg [14:0] frame_timeout;
 always @(posedge clk48) 
@@ -409,76 +420,6 @@ always @(posedge clk48) begin
 end
 
 assign end_of_frame = frame_end;
-
-//-------------------------------------------------------------------------------------------------
-endmodule
-//-------------------------------------------------------------------------------------------------
-
-
-//-------------------------------------------------------------------------------------------------
-//-------------------------------------------------------------------------------------------------
-// Design Name : Ethernet_RxD
-// File Name   : Ethernet_RxD.v
-// Function    : Receives an Ethernet Packet 
-//-------------------------------------------------------------------------------------------------
-//-------------------------------------------------------------------------------------------------
-module TENBASET_RxD_1(
-    input            clk50,                 // 40 Mhz Clockey
-    input            manchester_data_in,    // Ethernet data input
-    output     [7:0] RxData,                // Data byte output
-    output           new_byte_available,    //
-    output reg       end_of_Ethernet_frame  // indicate an Ethernet frame was captured
-);
-//-------------------------------------------------------------------------------------------------
-assign 		  RxData = data;
-//-------------------------------------------------------------------------------------------------
-reg [2:0]     in_data;
-reg [7:0]     data;
-reg [1:0]     cnt;
-reg           new_bit_avail;
-always @(posedge clk50) in_data <= {in_data[1:0], manchester_data_in};
-always @(posedge clk50) if(|cnt || (in_data[2] ^ in_data[1])) cnt <= cnt + 2'd1;
-always @(posedge clk50) new_bit_avail <= (cnt == 3);
-always @(posedge clk50) if(cnt == 3) data <= {in_data[1],data[7:1]};
-
-//-------------------------------------------------------------------------------------------------
-reg [4:0] sync1;
-always @(posedge clk50) begin 
-    if(end_of_Ethernet_frame) sync1 <= 0; 
-    else begin
-        if(new_bit_avail) begin
-              if(!(data==8'h55 || data==8'hAA)) sync1 <= 0;    // not preamble?
-            else                // if all bits of this "sync1" counter are one, we decide that enough of the preamble
-                if(~&sync1)     // has been received, so stop counting and wait for "sync2" to detect the SFD
-                    sync1 <= sync1 + 5'd1; // otherwise keep counting
-        end
-    end
-end
-
-//-------------------------------------------------------------------------------------------------
-reg [9:0] sync2;
-always @(posedge clk50) begin
-    if(end_of_Ethernet_frame) sync2 <= 0;
-    else begin
-        if(new_bit_avail) begin                    // if the SFD has already been detected (Ethernet data is coming in)
-            if(|sync2) sync2 <= sync2 + 10'd1;     // then count the bits coming in
-              else if(&sync1 && data == 8'hD5) sync2 <= sync2 + 10'd1; // otherwise, let's wait for the SFD (0xD5)
-                
-        end
-    end
-end
-assign new_byte_available = new_bit_avail && (sync2[2:0] == 3'h0) && (sync2[9:3] != 0);  
-
-//-------------------------------------------------------------------------------------------------
-// if no clock transistion is detected for some time, that's the end of the Ethernet frame
-//-------------------------------------------------------------------------------------------------
-reg [2:0] transition_timeout;
-always @(posedge clk50) begin 
-    if(in_data[2]^in_data[1]) transition_timeout <= 0; 
-    else if(~&cnt)            transition_timeout <= transition_timeout + 3'd1; // if cnt =0, increment
-end
-    
-always @(posedge clk50) end_of_Ethernet_frame <= &transition_timeout; // if timeout is all 1's
 
 //-------------------------------------------------------------------------------------------------
 endmodule
