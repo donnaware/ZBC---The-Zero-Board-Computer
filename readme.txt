@@ -11,7 +11,7 @@ to run DOS and perhaps general enough to run some other tiny OS
 (www.terasic.com) boards and the FPGA code is based heavily on the
 ZET computer (http://zet.aluzina.org) which runs on the Terasic DE1. 
 
-For more details, read the areticl "ZBC RevD.pdf" posted under the 
+For more details, read the article "ZBC RevD.pdf" posted under the 
 subdirectory "design".
 
 

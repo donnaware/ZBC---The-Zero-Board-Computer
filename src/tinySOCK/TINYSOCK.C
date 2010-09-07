@@ -97,13 +97,13 @@ void TinySOCK(void)
                     for(i=0; i<udp_len; i++) printf("%02x ",udp_msg[i]);
                     printf("\n");
                 }
-            }
-   		   	if(sed_CheckPacket(Protocol_ARP)) {   /* ARP message ? */
-                if(arp_checkpacket((struct arp_Header *)p)) {
-                  	printf("Responed to an arp.\n");
-    			}
 			}
-        }
+			if(sed_CheckPacket(Protocol_ARP)) {   /* ARP message ? */
+				if(arp_checkpacket((struct arp_Header *)p)) {
+					printf("Responed to an arp.\n");
+				}
+			}
+		}
         if(kbhit()) quit = getch();
     } while(quit != 'q');
 

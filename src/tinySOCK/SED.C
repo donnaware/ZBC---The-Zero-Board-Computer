@@ -25,6 +25,9 @@
 #include "sed.h"
 #include "comdrvr.h"   /* regular win32 comm routines, can use whatever      */
 
+#define DEBUG_ETH_RX   0
+#define DEBUG_ETH_TX   0
+
 /* ----- globals referenced in arp ----------------------------------------- */
 struct Ethernet_Address	local_ethernet_address;     /* local ethernet address */
 struct Ethernet_Address	broadcast_ethernet_address; /* Ethernet broadcast address */
@@ -191,25 +194,33 @@ int rcv_frame(int maxLength)
     Word addr, len;
 	Longword endTime;
 
+	outportb(RXCONTRL, 0x00);  /* Set NIC Buf to enable recv  */
 	endTime = MsecClock() + RX_TIMEOOUT ;   /* allow time for frame to come */
 	do {
-    	if(MsecClock() > endTime) return(0);
+		if(MsecClock() > endTime) return(0);
 	} while(!(inportb(RXSTATUS)&0x80));
 
-	len = ((((Word)inportb(RXCONTRL))<<8)&0x07) | ((Word)inportb(RXCONTRL));
+	len  = ((Word)(inportb(RXCONTRL)&0x07))*256;
+	len +=  (Word)inportb(RXADDRSS);
+	#if DEBUG_ETH_RX
+		printf("\nlen = %d\n",len);
+	#endif
+
 	if(len > maxLength) len = maxLength;
 	outportb(RXCONTRL, 0x00);  /* Set NIC Buf to address to 0 & disable rcv  */
 	outportb(RXADDRSS, 0x00);  /* Set NIC Buf to address to 0   			 */
 	addr = 0;
 	for(i = 0; i < len; i++) {
-		sed_tx[i] = inportb(RXBUFFER);
-		outportb(RXCONTRL, (addr>>8)&0x07); /* Set NIC Buf to address to 0   */
-		outportb(RXADDRSS,  addr    &0xFF); /* Set NIC Buf to address to 0   */
+		outportb(RXCONTRL, (addr>>8)&0x07); /* Set NIC Buf address  */
+		outportb(RXADDRSS,  addr    &0xFF); /* Set NIC Buf address  */
+		sed_rx[i] = inportb(RXBUFFER);
 		addr++;
+		#if DEBUG_ETH_RX
+			printf("%02x ",sed_tx[i]);
+		#endif
 	}
-	outportb(RXSTATUS, 0x00);  /* Clear NIC Buf status bit		   			 */
-	outportb(RXCONTRL, 0x80);  /* Set NIC Buf to address to 0 & enable recv  */
-	outportb(RXADDRSS, 0x00);  /* Set NIC Buf to address to 0   			 */
+	outportb(RXSTATUS, 0x00);  /* Clear NIC Buf status bit	 */
+	outportb(RXCONTRL, 0x80);  /* Rest NIC Buf   */
 	return(addr);
 }
 #endif
@@ -219,13 +230,16 @@ int rcv_frame(int maxLength)
 /* ------------------------------------------------------------------------- */
 int sed_checkMAC(void)
 {
-    int i;
-    int ret = 1;
-    for(i=0; i<6; i++) {
-        if((rcv->destination.MAC[i] != local_ethernet_address.MAC[i]) &&
-           (rcv->destination.MAC[i] != 0xFF)) {
-            ret = 0;
-            break;
+	int i;
+	int ret = 1;
+	for(i=0; i<6; i++) {
+		if((rcv->destination.MAC[i] != local_ethernet_address.MAC[i]) &&
+		   (rcv->destination.MAC[i] != 0xFF)) {
+			ret = 0;
+			#if DEBUG_ETH_RX
+				printf("arp mis %d %02x\n",i,rcv->destination.MAC[i]);
+			#endif
+			break;
         }
     }
     return(ret);
@@ -246,18 +260,21 @@ Byte *sed_IsPacket(void)
    	int ret;
 	Byte *pb = &sed_rx[1];
    	ret = ReadCOM(sed_rx, 1518);    /* read up to the MTU           */
-   	if(ret) {
-        if(sed_checkMAC()) pb += 14;   /* get past the ethernet header */
-        else               pb = 0; 	   /* was not for em         */
-    }
-    else pb = 0; 				/* nothing was received         */
+	if(ret) {
+		if(sed_checkMAC()) pb += 14;   /* get past the ethernet header */
+		else               pb = 0; 	   /* was not for em         */
+	}
+	else pb = 0; 				/* nothing was received         */
 	return(pb);
 #else
-   	int ret;
+	int ret;
 	Byte *pb = &sed_rx[0];
-   	ret = rcv_frame(1518);			/* receive up to MTU			*/
-	if(ret) pb += 14; 				/* get past the ethernet header */
-   	else 	pb  =  0; 				/* nothing was received         */
+	ret = rcv_frame(1518);			/* receive up to MTU			*/
+	if(ret) {
+		if(sed_checkMAC()) pb += 14;   /* get past the ethernet header */
+		else               pb = 0; 	   /* was not for em         */
+	}
+	else pb = 0; 				/* nothing was received         */
 	return(pb);
 #endif
 }
