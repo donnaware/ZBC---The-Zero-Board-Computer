@@ -1,0 +1,95 @@
+Aux1	Any header or jack	
+Aux2	Any header or jack	
+B1	Li Bat	
+C1	10uf	
+C2	.1uf	
+C3	.1uf	
+C4	1uf	
+C5	1uf	
+C6	1uf	
+C7	.1uf	
+C8	.1uf	
+C9	.1uf	
+C10	.015uf	
+C11	.1uf	
+C12	1uf	
+C13	.1uf	
+C14	1uf	
+C15	15pf	
+C16	15pf	
+C17	1uf	
+C18	.015uf	
+C19	1uf	
+C20	.1uf	
+C21	1uf	
+C22	1uf	
+J1	USB	
+J2	Any header or jack	
+J3	PS2 Mouse connector	
+J4	VGA connector	
+J5	PS2 Kbd connector	
+J6	Any header or jack	
+J7	Audio Jack	
+J8	LCD connector	
+J9	GPIO	
+J10	Ethernet Jack	
+J11	Game	
+LD1	Standard SMT LED		
+LED1	Standard SMT LED	
+LED2	Standard SMT LED		
+LED3	Standard SMT LED	
+O1	C33XX SMD Osc, 40Mhz Osc
+Q4	2N2904	
+Q5	2N2904	
+R1	10K	
+R2	100	
+R3	100	
+R4	1K	
+R5	10k	
+R6	10k	
+R7	120	
+R8	1.5k	
+R9	100K	
+R10	100K	
+R11	1.5K	
+R12	1.5K	
+R13	100	
+R14	100	
+R15	220	
+R18	100k	
+R19	100k	
+R20	470	
+R21	1k	
+R22	2k	
+R24	1.5k	
+R25	120	
+R29	220	
+R30	20K Pot	
+RN1	10K	
+RN2	120	
+RN3	2K	
+RN4	1K	
+RN5	2K	
+RN6	1K	
+RN7	2K	
+RN8	1K	
+RN9	2K	
+SKT1	SD Card Socket	
+SW1	Reset	
+SW2	Power	
+SW3	Reset	
+T1	Ethernet Isolation transformer	
+U1	EP3C16E144	
+U2	PIC18F2550	
+U3	IS42S16400	
+U4	SST25VF	
+U5	LM1117-3.3	
+U6	LM358	
+U7	BAT52	
+U8	LDO (1.2)	
+U9	LDO (2.5)	
+U10	MAX232	
+U11	TTL Inverter (7404 or equiv)	
+U12	DS1302	
+X1	20Mhz Xtal	
+X2	32.768Khz	
